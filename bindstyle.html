@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+		<style>
+			.container{
+				height:777px;
+				width:777px;
+				background:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<input type="number" v-model="w">
+			<input type="number" v-model="h">
+			<div class="container" v-bind:style="{width:w+'px',height:h+'px'}">aa</div>
+		</div>
+		<script type="text/javascript">
+			new Vue({
+				el:'.box',
+				data:{
+					w:777,
+					h:777
+				}
+			})
+		</script>
+	</body>
+</html>
